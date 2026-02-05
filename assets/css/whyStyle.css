@@ -1,0 +1,440 @@
+a{text-decoration:none;color:#fff;font-size:16px}
+li {list-style: none; }
+
+@font-face {
+  font-family: 'Geist';
+  font-weight: 200;
+  font-style: normal;
+  src: url('../font/Geist/static/Geist-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Geist';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../font/Geist/static/Geist-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Geist';
+  font-weight: 600;
+  font-style: normal;
+  src: url('../font/Geist/static/Geist-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Geist';
+  font-weight: 800;
+  font-style: normal;
+  src: url('../font/Geist/static/Geist-ExtraBold.ttf');
+}
+
+/*,
+    url('./assets/font/Geist/static/Geist-Black.ttf'),
+    url('./assets/font/Geist/static/Geist-Bold.ttf'),
+    url('./assets/font/Geist/static/Geist-ExtraBold.ttf'),
+    url('./assets/font/Geist/static/Geist-ExtraLight.ttf'),
+    url('./assets/font/Geist/static/Geist-Light.ttf'),
+    url('./assets/font/Geist/static/Geist-Medium.ttf'),
+    url('./assets/font/Geist/static/Geist-Regular.ttf'),
+    url('./assets/font/Geist/static/Geist-SemiBold.ttf'),
+    url('./assets/font/Geist/static/Geist-Thin.ttf'),
+    */
+
+main{
+	background-color: #ffffff;
+	margin: 0 auto; 
+	border-bottom: 1px solid #000000;
+	padding: 20px 0 20px 0; 
+	width: 100%;
+	height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0; /* 네비 아래로 텍스트를 밀기 위해 body 패딩은 제거 */
+    font-family: "Geist"; 
+    font-weight: 400;
+}
+
+/*navbar css start*/
+nav{
+    color: rgb(0, 0, 0);
+    /* height: 35px; */
+    padding: 0 138px;
+    width:auto;
+    display: flex;
+    position: fixed; /* 변경: fixed로 고정 */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* 커버보다 위에 배치 */
+    flex-direction: row;
+    justify-content: start;
+    background: rgb(255, 255, 255);
+    overflow: visible;
+}
+
+/* 드롭다운 위치 기준: 각 li를 기준으로 절대 위치 배치 */
+nav > ul > li{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 8px;    /* 클릭 영역 확보 */
+    height: auto;
+    width: auto;       /* 고정 너비 제거 */
+    position: relative;/* 드롭다운 위치 기준 */
+}
+
+.nav_content{
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    gap:60px;
+    height: auto;
+    /* overflow: hidden; */
+}
+
+.logo{
+    width:70px;
+    height:auto;
+    object-fit: contain;
+}
+
+.navbar_right{ /* navbar의 최상단 오른쪽에 보여지는 메인 tab들*/
+    display: inline-block;
+    padding: 6px 4px;
+    white-space: nowrap; /* 라벨 줄바꿈 방지 */
+    font-size: 16px;
+    color: rgb(0,0,0);
+}
+
+
+/* 드롭다운은 바로 아래에 표시 */
+.dropdown{
+   display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%; /* li 바로 아래, 간격 조정 가능 */
+    z-index: 1100;
+    background: rgb(255, 255, 255);
+    min-width: 140px;    /* 필요 시 조정 */
+    white-space: normal; /* 드롭다운 내부는 줄바꿈 허용 */
+    /* box-shadow: 0 6px 12px rgba(0,0,0,0.08); */
+    border-radius: 0 0 4px 4px;
+}
+
+.dropdown a{
+    display : block;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(41, 46, 91); /*TODO*/
+    padding: 0.5rem 0;
+    /* white-space: nowrap; */
+
+    font-family: "Geist"; 
+    font-weight: 200;
+}
+
+.nav_content > li:hover .dropdown{
+    display: block;
+}
+
+.dropdown:hover .dropdown{
+    display: block;
+}
+
+/*navbar css ends*/
+
+/* .cover{
+    background-image: url("../img/main_bg.jpg");
+    padding:0%;
+    background-attachment:local;
+    background-size:cover;
+    object-fit: cover;
+    width:auto;
+    height:500px;
+
+    color: rgb(255, 255, 255);
+    
+    text-align: center;
+    font-size: 20vh;
+    position:absolute;
+    transition: 0.2s;
+} */
+
+/*TODO 수정,작동 안 함*/
+
+#cover {
+  position: relative;
+  height: 100vh; /* 화면 높이만큼 */
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+  padding-top: 55px;
+
+  font-family: "Geist";
+  font-weight: 600;
+}
+
+/* 배경 이미지를 가짜 레이어로 만들기 */
+#cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/index_img/main_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: translateY(var(--bg-y, 0));
+  z-index: -1;
+}
+
+/* 중앙 텍스트 */
+#cover .cover-text {
+  font-size: 10vw;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+/* 아래 본문이 위로 올라오게 */
+.content {
+  position: relative;
+  background: white;
+  width: auto;
+  padding: 100px 138px;
+  z-index: 1;
+}
+
+/*본문 섹션 2*/
+.section-1{
+    background: white;
+    display: flex;
+    width: 100%;
+    height: 70vh;
+}
+
+/*본문 섹션 2*/
+.section-1 .section1-img{
+    flex: 0 0 40%;
+    max-width: 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-1 .section1-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 텍스트 영역: 나머지 60% 차지 */
+.section-1 .section-text{
+    flex: 1 1 60%;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 수직 중앙 정렬 */
+    align-items: center;     /* 수평 중앙 정렬 */
+    gap: 12px; /* 제목/본문 간 간격 (선택) */
+}
+
+.section-2{
+    padding: 40px 10vw;
+    background: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 40vh
+}
+
+.section-2 .section-text{
+    background: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 0 3rem;
+}
+
+.section-2 .section-text h2{
+    font-size: 32px;
+}
+
+
+.section-2 .block-container{
+    margin: 0 auto; /* 중앙 정렬 */
+    display: grid; /* Grid 컨테이너 설정 */
+    grid-template-columns: repeat(2, 1fr); /* 두 개의 균등한 열 */
+    grid-auto-rows: minmax(120px, auto);
+    gap: 1.5rem; /* 행 간격 2rem, 열 간격 2rem */
+    padding: 20px; 
+    width: 100%;
+    height: auto;
+}
+
+.block-1, .block-2, .block-3, .block-4 {
+    display: grid;
+    grid-template-columns: 134px 1fr;       /* 왼쪽에 이미지 고정 너비, 오른쪽 설명 */
+    grid-template-rows: auto 1fr;           /* 상단 제목 높이 자동, 아래 영역 채움 */
+    grid-template-areas:
+        "header header"
+        "media desc";
+    gap: 12px;
+    padding: 16px;
+    height: 240px;
+    box-sizing: border-box;
+    align-items: start;
+    border-radius: 5px;
+}
+
+.block-1 {
+    grid-row: 1; /* 첫 번째 행 */
+    grid-column: 1; /* 첫 번째 열 */
+    background-color: #5e8d66;
+    color: #ffffff;
+}
+
+.block-2 {
+    grid-row: 1; /* 첫 번째 행 */
+    grid-column: 2; /* 두 번째 열 */
+    background-color: #eedbbe;
+    color: #000000;
+}
+
+.block-3 {
+    grid-row: 2; /* 두 번째 행 */
+    grid-column: 1; /* 첫 번째 열 */
+    background-color: #eedbbe;
+    color: #000000;
+}
+
+.block-4 {
+    grid-row: 2; /* 두 번째 행 */
+    grid-column: 2; /* 두 번째 열 */
+    background-color: #5e8d66;
+    color: #ffffff;
+}
+
+/* 추가적으로 h2와 p 태그 스타일 */
+.block-1 h3, .block-2 h3, .block-3 h3, .block-4 h3 {
+    grid-area: header;
+    margin: 0;
+    font-size: 16px;
+    align-self: start;
+}
+
+.block-1 .description, .block-2 .description, .block-3 .description, .block-4 .description {
+    grid-area: desc;
+    font-size: 16px;
+    align-self: start;
+    /* 필요하면 텍스트 정렬/여백 추가 */
+}
+
+.block-1 .icon, .block-2 .icon, .block-3 .icon, .block-4 .icon { 
+    grid-area: media;
+    width: 134px;
+    height: 146px;
+    object-fit: contain;
+    border: 1px solid rgba(0,0,0,0.08);
+    justify-self: start;
+    align-self: start;
+}
+
+.section-3{
+    padding: 40px 10vw;
+    background: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 20vh
+}
+
+.section-3 .section-text h2{
+    padding: 0 0.5rem;
+    background: #ffffff;
+    font-size: 32px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 3rem
+}
+
+.contributers-container{
+    margin: 0 auto; /* 중앙 정렬 */
+    display: grid; /* Grid 컨테이너 설정 */
+    grid-template-columns: repeat(4, 1fr); /* 네 개의 균등한 열 */
+    grid-auto-rows: minmax(120px, auto);
+    gap: 1rem; /* 행 간격 2rem, 열 간격 2rem */
+    padding: 0 20px ; 
+    width: 100%;
+    height: auto;
+}
+
+.contributer-1, .contributer-2, .contributer-3, .contributer-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 227px 48px 1fr;         
+    grid-template-areas:
+        "image"
+        "name"
+        "desc";
+    gap: 12px;
+    padding: 16px;
+    height: 480px;
+    box-sizing: border-box;
+    align-items: center;
+    border-radius: 5px;
+
+    border: #000000 1px solid;
+}
+
+.contributer-img{
+    grid-area: image;
+    width: 134px;
+    height: 227px;
+    object-fit: cover;
+    border: 1px solid rgba(0,0,0,0.08);
+    justify-self: center;
+    align-self: start;
+}
+
+.contributer-1 .name, .contributer-2 .name, .contributer-3 .name, .contributer-4 .name {
+    grid-area: name;
+    font-size: 24px;
+    height: 2rem;
+    justify-self: center;
+}
+
+.contributer-1 .description, .contributer-2 .description, .contributer-3 .description, .contributer-4 .description {
+    grid-area: desc;
+    font-size: 16px;
+    height: 4rem;
+    justify-self: center;
+    align-self: start;
+    text-align: center;
+    font-style: italic;
+    /* 필요하면 텍스트 정렬/여백 추가 */
+
+    font-weight: 100;
+}
+
+footer{
+    background-color: #f3ac43;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 16px;
+    padding: 0.5rem 0;
+    /* width:100%; */
+}
