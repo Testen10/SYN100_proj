@@ -177,6 +177,7 @@ nav > ul > li{
   overflow: hidden;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -201,10 +202,18 @@ nav > ul > li{
 }
 
 /* 중앙 텍스트 */
-#cover .cover-text {
-  font-size: 10vw;
-  font-weight: bold;
+#cover .cover-logo {
+  margin: 2vh 10vw;
+  height: 35vh;
+  filter: brightness(5000%);
+}
+
+#cover .subtitle {
+  font-size: 1.5vw;
+  font-weight: normal;
+  font-style: italic;
   letter-spacing: 4px;
+  margin: 0 0;
 }
 
 /* 아래 본문이 위로 올라오게 */
