@@ -1,3 +1,14 @@
+/*
+navy
+#00296b
+#003f88
+#00509d
+#fdc500
+#ffd500
+yellow
+ivory: F5F0E6
+*/
+
 a{text-decoration:none;color:#fff;font-size:16px}
 li {list-style: none; }
 
@@ -264,14 +275,14 @@ nav > ul > li{
 
 .section-2{
     padding: 40px 10vw;
-    background: #ffffff;
+    background: #F5F0E6;
     width: 100%;
     box-sizing: border-box;
     min-height: 40vh
 }
 
 .section-2 .section-text{
-    background: #ffffff;
+    background: #F5F0E6;
     width: 100%;
     box-sizing: border-box;
     text-align: left;
@@ -312,28 +323,28 @@ nav > ul > li{
 .block-1 {
     grid-row: 1; /* 첫 번째 행 */
     grid-column: 1; /* 첫 번째 열 */
-    background-color: #5e8d66;
+    background-color: #00509d;
     color: #ffffff;
 }
 
 .block-2 {
     grid-row: 1; /* 첫 번째 행 */
     grid-column: 2; /* 두 번째 열 */
-    background-color: #eedbbe;
+    background-color: #fdc500;
     color: #000000;
 }
 
 .block-3 {
     grid-row: 2; /* 두 번째 행 */
     grid-column: 1; /* 첫 번째 열 */
-    background-color: #eedbbe;
+    background-color: #fdc500;
     color: #000000;
 }
 
 .block-4 {
     grid-row: 2; /* 두 번째 행 */
     grid-column: 2; /* 두 번째 열 */
-    background-color: #5e8d66;
+    background-color: #00509d;
     color: #ffffff;
 }
 
@@ -411,10 +422,9 @@ nav > ul > li{
 
 .contributer-img{
     grid-area: image;
-    width: 134px;
+    width: auto;
     height: 227px;
     object-fit: cover;
-    border: 1px solid rgba(0,0,0,0.08);
     justify-self: center;
     align-self: start;
 }
