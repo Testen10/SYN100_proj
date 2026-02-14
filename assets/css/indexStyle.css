@@ -75,7 +75,7 @@ body {
 nav{
     color: rgb(0, 0, 0);
     /* height: 35px; */
-    padding: 0 138px;
+    padding: 0 9.5vw;
     width:auto;
     display: flex;
     position: fixed; /* 변경: fixed로 고정 */
@@ -232,7 +232,7 @@ nav > ul > li{
   position: relative;
   background: white;
   width: auto;
-  padding: 100px 138px;
+  padding: 0 9.5vw;
   z-index: 1;
 }
 
