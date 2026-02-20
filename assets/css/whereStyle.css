@@ -1,0 +1,542 @@
+/*
+navy
+#00296b
+#003f88
+#00509d
+#fdc500
+#ffd500
+yellow
+ivory: F5F0E6
+*/
+a{text-decoration:none;color:#fff;font-size:16px}
+li {list-style: none; }
+
+@font-face {
+  font-family: 'Geist';
+  font-weight: 100;
+  font-style: normal;
+  src: url('../font/Geist/static/Geist-ExtraLight.ttf');
+}
+
+@font-face {
+  font-family: 'Geist';
+  font-weight: 200;
+  font-style: normal;
+  src: url('../font/Geist/static/Geist-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Geist';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../font/Geist/static/Geist-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Geist';
+  font-weight: 600;
+  font-style: normal;
+  src: url('../font/Geist/static/Geist-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Geist';
+  font-weight: 800;
+  font-style: normal;
+  src: url('../font/Geist/static/Geist-ExtraBold.ttf');
+}
+
+/*,
+    url('./assets/font/Geist/static/Geist-Black.ttf'),
+    url('./assets/font/Geist/static/Geist-Bold.ttf'),
+    url('./assets/font/Geist/static/Geist-ExtraBold.ttf'),
+    url('./assets/font/Geist/static/Geist-ExtraLight.ttf'),
+    url('./assets/font/Geist/static/Geist-Light.ttf'),
+    url('./assets/font/Geist/static/Geist-Medium.ttf'),
+    url('./assets/font/Geist/static/Geist-Regular.ttf'),
+    url('./assets/font/Geist/static/Geist-SemiBold.ttf'),
+    url('./assets/font/Geist/static/Geist-Thin.ttf'),
+    */
+
+main{
+	background-color: #ffffff;
+	margin: 0 auto; 
+	border-bottom: 1px solid #000000;
+	padding: 20px 0 20px 0; 
+	width: 100%;
+	height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0; /* 네비 아래로 텍스트를 밀기 위해 body 패딩은 제거 */
+    font-family: "Geist"; 
+    font-weight: 400;
+}
+
+/*navbar css start*/
+nav{
+    color: rgb(0, 0, 0);
+    /* height: 35px; */
+    padding: 0 9.5vw;padding: 0 9.5vw;
+    width:auto;
+    display: flex;
+    position: fixed; /* 변경: fixed로 고정 */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* 커버보다 위에 배치 */
+    flex-direction: row;
+    justify-content: start;
+    background: rgb(255, 255, 255);
+    overflow: visible;
+}
+
+/* 드롭다운 위치 기준: 각 li를 기준으로 절대 위치 배치 */
+nav > ul > li{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 8px;    /* 클릭 영역 확보 */
+    height: auto;
+    width: auto;       /* 고정 너비 제거 */
+    position: relative;/* 드롭다운 위치 기준 */
+}
+
+.nav_content{
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    gap:60px;
+    height: auto;
+    /* overflow: hidden; */
+}
+
+.logo{
+    width:70px;
+    height:auto;
+    object-fit: contain;
+}
+
+.navbar_right{ /* navbar의 최상단 오른쪽에 보여지는 메인 tab들*/
+    display: inline-block;
+    padding: 6px 4px;
+    white-space: nowrap; /* 라벨 줄바꿈 방지 */
+    font-size: 16px;
+    color: rgb(0,0,0);
+}
+
+
+/* 드롭다운은 바로 아래에 표시 */
+.dropdown{
+   display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%; /* li 바로 아래, 간격 조정 가능 */
+    z-index: 1100;
+    background: rgb(255, 255, 255);
+    min-width: 140px;    /* 필요 시 조정 */
+    white-space: normal; /* 드롭다운 내부는 줄바꿈 허용 */
+    /* box-shadow: 0 6px 12px rgba(0,0,0,0.08); */
+    border-radius: 0 0 4px 4px;
+}
+
+.dropdown a{
+    display : block;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(41, 46, 91); /*TODO*/
+    padding: 0.5rem 0;
+    /* white-space: nowrap; */
+
+    font-family: "Geist"; 
+    font-weight: 200;
+}
+
+.nav_content > li:hover .dropdown{
+    display: block;
+}
+
+.dropdown:hover .dropdown{
+    display: block;
+}
+
+/*navbar css ends*/
+
+#cover {
+  position: relative;
+  height: 20vh; /* 화면 높이만큼 */
+  width: 100%;
+  overflow: hidden;
+  background-image: url("../img/how_img/coverBg.jpg");
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+  padding-top: 55px;
+}
+
+/* 중앙 텍스트 */
+#cover .cover-text {
+  font-size: 8vh;
+  color:#ffffff;
+  letter-spacing: 4px;
+  margin: 0 8vw;
+  font-family: "Geist";
+  font-weight: 600;
+}
+
+.section1-title{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    height: 1.5rem;
+    width: auto;
+    color: #000000;
+    background: #F5F0E6;
+    padding: 0 8vw;
+    text-align: left;
+}
+
+.section1-title h2{
+    font-size: 6vh;
+    margin-top: 5vh;
+    margin-bottom: 0;
+}
+
+.section-1{
+    background: #F5F0E6;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 10vh 9.5vw;
+    padding-top: 5vh;
+    box-sizing: border-box;
+    gap: 3vh;
+    /* padding: 10vh 0; */
+}
+
+.container-col{
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    box-sizing: border-box;
+    
+    gap: 1vw;
+}
+
+.block-1{
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 2vw;
+    
+    background-color: #fff;
+    padding: 5vh 3vw;
+    border-radius: 10px;
+    height: auto;
+}
+
+.block-1 img{
+    width: 12vw;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.block-1 .text{
+    color: #333333;
+}
+
+.block-1 .text h3{ 
+    font-size: 24px;
+    color: #111111;
+    font-weight: 600;
+    margin-top:0;
+    margin-bottom:0.5em;
+}
+
+.block-1 .text p{
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.block-1 .text a{
+    font-size: 16px;
+    font-style:oblique ;
+    color: #777777;
+    font-weight: 200;
+}
+
+.block-1 .text a:hover{
+    color: #f3ac43;
+    transition-duration: 0.1s;
+}
+
+.block-2{
+    display: flex;
+    flex: 0 0 calc(5/12*100%);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 3vw;
+    
+    background-color: #fff;
+    padding: 5vh 3vw;
+    border-radius: 10px;
+    height: auto;
+}
+
+.block-2 img{
+    height: 30vh;
+    aspect-ratio: 1/1;
+    margin-top:0;
+    object-fit: contain;
+}
+
+.block-2 .text{
+    color: #333333;
+}
+
+.block-2 .text h3{ 
+    font-size: 24px;
+    color: #111111;
+    font-weight: 600;
+    margin-top:0;
+    margin-bottom:0.5em;
+}
+
+.block-2 .text p{
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.block-2 .text a{
+    font-size: 16px;
+    font-style:oblique ;
+    color: #777777;
+    font-weight: 200;
+}
+
+.block-2 .text a:hover{
+    color: #f3ac43;
+    transition-duration: 0.1s;
+}
+
+.section2-title{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    height: 1.5rem;
+    width: auto;
+    color: #ffffff;
+    background: #00296b;
+    padding: 0 8vw;
+    text-align: left;
+}
+
+.section2-title h2{
+    font-size: 6vh;
+    margin-top: 5vh;
+    margin-bottom: 0;
+}
+
+.section-2{
+    background: #00296b;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 10vh 9.5vw;
+    padding-top: 5vh;
+    box-sizing: border-box;
+    gap: 3vh;
+    /* padding: 10vh 0; */
+}
+
+.container-row{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 2vh;
+}
+
+.section-3{
+    background: #F5F0E6;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 10vh 9.5vw;
+    padding-top: 5vh;
+    box-sizing: border-box;
+    gap: 3vh;
+    /* padding: 10vh 0; */
+}
+
+.section3-title h2{
+    font-size: 6vh;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    text-align:center;
+}
+
+.section4-title{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    height: 1.5rem;
+    width: auto;
+    color: #ffffff;
+    background: #00296b;
+    padding: 0 8vw;
+    text-align: left;
+}
+
+.section4-title h2{
+    font-size: 6vh;
+    margin-top: 5vh;
+    margin-bottom: 0;
+}
+
+.section-4{
+    background: #00296b;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    min-height: 90vh;
+    padding: 10vh 9.5vw;
+    padding-top: 5vh;
+    box-sizing: border-box;
+    gap: 3vh;
+    /* padding: 10vh 0; */
+}
+
+.section-4 .button-container {
+    flex: 0 0 30%;
+    display:flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    border-radius: 10px;
+    gap:0.5vw;
+    padding: 1vw;
+}
+
+.section-4 .button-container .type-list{
+    display:flex;
+    flex: 0 0 20%;
+    flex-direction: column;
+    gap:0.5vw;
+}
+
+.section-4 .button-container .type-list input[type=radio]{
+    display: none;
+}
+
+.section-4 .button-container .type-list input[type=radio]+label{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    height: 2rem;
+    border: 0px solid #333;
+    border-radius: 5px;
+    line-height: 24px;
+    font-weight: bold;
+    font-size:16px;
+}
+
+.section-4 .button-container .type-list input[type=radio]+label{
+    background-color: #cccccc;
+    color: #333;
+}
+.section-4 .button-container .type-list input[type=radio]:checked+label{
+    background-color: #f3ac43;
+    color: #fff;
+}
+
+.section-4 .button-container .button-list{
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    gap:0.5vw;
+}
+
+.section-4 .button-container .button-list input[type=radio]{
+    display: none;
+}
+
+.section-4 .button-container .button-list input[type=radio]+label{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    height: 2rem;
+    border: 0px solid #333;
+    border-radius: 5px;
+    line-height: 24px;
+    font-weight: bold;
+    font-size:16px;
+}
+
+.section-4 .button-container .button-list input[type=radio]+label{
+    background-color: #cccccc;
+    color: #333;
+}
+.section-4 .button-container .button-list input[type=radio]:checked+label{
+    background-color: #f3ac43;
+    color: #fff;
+}
+
+.section-4 .map{
+    display: flex;
+    position: relative;
+    flex: 1;
+}
+
+.section-4 .map iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    background-color: #f3ac43;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 16px;
+    padding: 0.5rem 0;
+    /* width:100%; */
+}
