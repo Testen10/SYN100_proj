@@ -302,7 +302,7 @@ nav > ul > li{
     background-color: #ffd500;
 }
 
-.section-3{
+.section-2{
     background: #F5F0E6;
     display: flex;
     /* justify-content: left;
@@ -319,23 +319,23 @@ nav > ul > li{
     gap: 3vh;
 }
 
-.section-3 .description{
+.section-2 .description{
     font-size: 16px;
     text-align: left;
     font-weight: 200;
 }
 
-.section-3 .description{
+.section-2 .description{
     font-size: 20px;
     text-align: left;
     font-weight: 200;
 }
 
-.section-3 .description b{
+.section-2 .description b{
     background-color: #ffd500;
 }
 
-.section-3 .container-section{
+.section-2 .container-section{
     display: flex;
     /* justify-content: left;
     align-items: left; */
@@ -347,7 +347,7 @@ nav > ul > li{
     gap: 3vh;
 }
 
-.section-3 .container-section .container{
+.section-2 .container-section .container{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -360,26 +360,26 @@ nav > ul > li{
     min-width: 0;
 }
 
-.section-3 .container-section  .container img{
+.section-2 .container-section  .container img{
     width: 19vw;
     aspect-ratio: 1/1;
     object-fit: contain;
 }
 
 
-.section-3 .text{
+.section-2 .text{
     flex: 1;
     font-size: 16px;
     text-align: left;
     font-weight: 200;
 }
-.section-3 .text h5{
+.section-2 .text h5{
     font-size: 20px;
     margin-top: 0;
     margin-bottom: 1rem;
     text-align: center;
 }
-.section-3 .text b{
+.section-2 .text b{
     background-color: #ffd500;
 }
 
