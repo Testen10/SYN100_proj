@@ -1,0 +1,118 @@
+not used
+.section-1{
+    background: #00296b;
+    display: flex;
+    /* justify-content: left;
+    align-items: left; */
+    text-align: center;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 0 9.5vw;
+    padding-bottom: 10vh;
+    box-sizing: border-box;
+    gap: 12vh;
+    /* padding: 10vh 0; */
+}
+
+.section-1 .section-text{
+    display: flex;
+    flex-direction: column;
+    height: 1.5rem;
+    width: 100vw;
+}
+
+.ewaste-container .slideshow-title,
+.clothing-container .slideshow-title{
+    display:flex;
+    flex:1;
+    height:calc((9/16*60vw));
+    /* width: 40vw; */
+}
+
+.ewaste-container .slideshow-title img,
+.clothing-container .slideshow-title img{
+    display:flex;
+    flex:1;
+    height:calc((9/16*60vw)*0.9);
+    object-fit: contain;
+    align-items: center;
+    rotate: 180deg;
+}
+
+.ewaste-container{
+    /* margin: 0 138px 10px 138px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.clothing-container{
+    /* margin: 0 138px 10px 138px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+/* slideshow */
+.container {
+    display:flex;
+    flex: 0 0 auto;
+    width: 60vw;
+    aspect-ratio: 16 / 9;
+}
+
+.slider-wrapper {
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+.slider {
+	display: flex;
+	width: 60vw;
+    aspect-ratio: 16 / 9;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+	scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider img {
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+    width: 60vw;
+    aspect-ratio: 16 / 9;
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 55%;
+    top: 95%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+}
+slideshow end

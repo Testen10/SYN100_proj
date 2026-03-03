@@ -228,148 +228,8 @@ nav > ul > li{
     font-weight: 100;
 }
 
-.section-1{
-    background: #00296b;
-    display: flex;
-    /* justify-content: left;
-    align-items: left; */
-    text-align: center;
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    padding: 0 9.5vw;
-    padding-bottom: 10vh;
-    box-sizing: border-box;
-    gap: 12vh;
-    /* padding: 10vh 0; */
-}
 
-.section-1 .section-text{
-    display: flex;
-    flex-direction: column;
-    height: 1.5rem;
-    width: 100vw;
-}
-
-.ewaste-container{
-    /* margin: 0 138px 10px 138px; */
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-.clothing-container{
-    /* margin: 0 138px 10px 138px; */
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-/* slideshow */
-.container {
-    display:flex;
-    flex: 0 0 auto;
-    width: 60vw;
-    aspect-ratio: 16 / 9;
-}
-
-.slider-wrapper {
-	position: relative;
-	max-width: 48rem;
-	margin: 0 auto;
-}
-
-.slider {
-	display: flex;
-	width: 60vw;
-    aspect-ratio: 16 / 9;
-	overflow-x: auto;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-	border-radius: 0.5rem;
-	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
-	scrollbar-width: none; /* Hide scrollbar Firefox */
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.slider::-webkit-scrollbar {
-	display: none;
-}
-
-.slider img {
-	flex: 1 0 100%;
-	scroll-snap-align: start;
-	object-fit: cover;
-    width: 60vw;
-    aspect-ratio: 16 / 9;
-}
-
-.slider-nav {
-	display: flex;
-	column-gap: 1rem;
-	position: absolute;
-	bottom: 1.25rem;
-	left: 55%;
-    top: 95%;
-	transform: translateX(-50%);
-	z-index: 1;
-}
-
-.slider-nav a {
-	width: 0.5rem;
-	height: 0.5rem;
-	border-radius: 50%;
-	background-color: #fff;
-	opacity: 0.75;
-	transition: opacity ease 250ms;
-}
-
-.slider-nav a:hover {
-	opacity: 1;
-}
-/* slideshow end */
-
-.ewaste-container .slideshow-title,
-.clothing-container .slideshow-title{
-    display:flex;
-    flex:1;
-    height:calc((9/16*60vw));
-    /* width: 40vw; */
-}
-
-.ewaste-container .slideshow-title img,
-.clothing-container .slideshow-title img{
-    display:flex;
-    flex:1;
-    height:calc((9/16*60vw)*0.9);
-    object-fit: contain;
-    align-items: center;
-    rotate: 180deg;
-}
-
-.section2-title{
-    display: flex;
-    flex:1;
-    flex-direction: column;
-    height: 1.5rem;
-    width: auto;
-    color: #000000;
-    background: #F5F0E6;
-    padding: 0 8vw;
-    text-align: left;
-}
-.section2-title h2{
-    font-size: 6vh;
-    margin-top: 5vh;
-    margin-bottom: 0;
-}
-.section2-title h3{
-    font-size: 3vh;
-    margin-top: 0;
-    margin-bottom: 5vh;
-    font-weight: 100;
-}
-
-.section2-subtitle{
+.section1-subtitle{
     display: flex;
     flex:1;
     flex-direction: column;
@@ -381,14 +241,14 @@ nav > ul > li{
     text-align: left;
 }
 
-.section2-subtitle h4{
+.section1-subtitle h4{
     font-size: 4vh;
     margin-top: 0;
     margin-bottom: 1em;
     margin-left: 1vw;
 }
 
-.section-2{
+.section-1{
     background: #F5F0E6;
     display: flex;
     /* justify-content: left;
@@ -405,7 +265,7 @@ nav > ul > li{
     gap: 3vh;
 }
 
-.section-2 .container{
+.section-1 .container{
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -416,29 +276,29 @@ nav > ul > li{
     border-radius: 1vw;
     padding: 0 3vw;
 }
-.section-2 .container img{
+.section-1 .container img{
     width: 19vw;
     aspect-ratio: 1/1;
     object-fit: contain;
 }
 
-.section-2 .text{
+.section-1 .text{
     flex: 1;
     font-size: 16px;
     text-align: left;
     font-weight: 200;
 }
-.section-2 .text h5{
+.section-1 .text h5{
     font-size: 20px;
     margin-top: 0;
     margin-bottom: 1rem;
 
 }
-.section-2 .text li{
+.section-1 .text li{
     list-style:disc;
 }
 
-.section-2 .text b{
+.section-1 .text b{
     background-color: #ffd500;
 }
 

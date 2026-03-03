@@ -210,6 +210,7 @@ nav > ul > li{
   background-position: center;
   transform: translateY(var(--bg-y, 0));
   z-index: -1;
+  filter: brightness(50%);
 }
 
 /* 중앙 텍스트 */
@@ -230,14 +231,14 @@ nav > ul > li{
 /* 아래 본문이 위로 올라오게 */
 .content {
   position: relative;
-  background: white;
+  /* background: white; */
   width: auto;
   padding: 0 9.5vw;
   z-index: 1;
 }
 
 /*본문 섹션 2*/
-.section-1{
+#section-1{
     background: white;
     display: flex;
     width: 100%;
@@ -245,14 +246,14 @@ nav > ul > li{
 }
 
 /*본문 섹션 2*/
-.section-1 .section1-img{
+#section-1 .section1-img{
     flex: 0 0 40%;
     max-width: 40%;
     position: relative;
     overflow: hidden;
 }
 
-.section-1 .section1-img img{
+#section-1 .section1-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -260,7 +261,7 @@ nav > ul > li{
 }
 
 /* 텍스트 영역: 나머지 60% 차지 */
-.section-1 .section-text{
+#section-1 .section-text{
     flex: 1 1 60%;
     padding: 40px;
     box-sizing: border-box;
@@ -299,24 +300,22 @@ nav > ul > li{
     display: grid; /* Grid 컨테이너 설정 */
     grid-template-columns: repeat(2, 1fr); /* 두 개의 균등한 열 */
     grid-auto-rows: minmax(120px, auto);
-    gap: 1.5rem; /* 행 간격 2rem, 열 간격 2rem */
+    gap: 1vw; /* 행 간격 2rem, 열 간격 2rem */
     padding: 20px; 
     width: 100%;
     height: auto;
 }
 
 .block-1, .block-2, .block-3, .block-4 {
-    display: grid;
-    grid-template-columns: 134px 1fr;       /* 왼쪽에 이미지 고정 너비, 오른쪽 설명 */
-    grid-template-rows: auto 1fr;           /* 상단 제목 높이 자동, 아래 영역 채움 */
-    grid-template-areas:
-        "header header"
-        "media desc";
-    gap: 12px;
-    padding: 16px;
-    height: 240px;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     align-items: start;
+    gap: 1vw;
+    width: 39vw;
+    padding: 1.5vw;
+    min-height: 240px;
+    height: 30vh;
     border-radius: 5px;
 }
 
@@ -350,27 +349,39 @@ nav > ul > li{
 
 /* 추가적으로 h2와 p 태그 스타일 */
 .block-1 h3, .block-2 h3, .block-3 h3, .block-4 h3 {
-    grid-area: header;
     margin: 0;
-    font-size: 16px;
+    font-size: 24px;
     align-self: start;
 }
 
-.block-1 .description, .block-2 .description, .block-3 .description, .block-4 .description {
-    grid-area: desc;
-    font-size: 16px;
-    align-self: start;
+.block-1 .content, .block-2 .content, .block-3 .content, .block-4 .content {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: flex-start;
+    gap: 1vw;
+    padding: 0;
     /* 필요하면 텍스트 정렬/여백 추가 */
 }
 
-.block-1 .icon, .block-2 .icon, .block-3 .icon, .block-4 .icon { 
-    grid-area: media;
-    width: 134px;
-    height: 146px;
+.block-1 .content .icon, .block-2 .content .icon, .block-3 .content .icon, .block-4 .content .icon { 
+    width: 8vw;
+    height: 20vh;
     object-fit: contain;
-    border: 1px solid rgba(0,0,0,0.08);
-    justify-self: start;
     align-self: start;
+}
+
+.block-1 .content .description, .block-2 .content .description, .block-3 .content .description, .block-4 .content .description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    font-size: 16px;
+    font-weight: 100;
+    font-family: 'Geist';
+    text-align: center;
+    /* flex: 1; */
 }
 
 .section-3{

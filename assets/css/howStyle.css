@@ -199,16 +199,28 @@ nav > ul > li{
     display: flex;
     /* justify-content: left;
     align-items: left; */
-    text-align: center;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
     width: 100%;
     height: auto;
-    flex-direction: column;
+    min-height: 80vh;
+    flex-direction: row;
     padding: 10vh 9.5vw;
+    padding-top: 5vh;
     box-sizing: border-box;
-    gap: 12vh;
+    gap: 1vw;
     /* padding: 10vh 0; */
+}
+
+.section-1 h3{
+    font-size: 32px;
+    color: #ffffff;
+    margin-top:0;
+}
+
+.section-1 video{
+    width: 40vw;
+    aspect-ratio: 16/9;
 }
 
 footer{
