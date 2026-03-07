@@ -59,7 +59,7 @@ li {list-style: none; }
     */
 
 main{
-	background-color: #ffffff;
+	background-color: #F5F0E6;
 	margin: 0 auto; 
 	border-bottom: 1px solid #000000;
 	padding: 20px 0 20px 0; 
@@ -173,7 +173,7 @@ nav > ul > li{
   height: 20vh; /* 화면 높이만큼 */
   width: 100%;
   overflow: hidden;
-  background-image: url("../img/why_img/coverBg.jpg");
+  background-image: url("../img/main_cover_lowBright.jpg");
 
   display: flex;
   justify-content: center;
@@ -195,14 +195,41 @@ nav > ul > li{
 }
 
 .tip{
-    background-color: #00296b;
+    background-color: #F5F0E6;
+    text-align: center;
+    padding-top: 3vh;
 }
-.tip p{
-    
+.tip button{
     font-size: 16px;
     font-weight: 200;
     text-align: center;
-    color: white;
+    color: #00296b;
+    background-color: #f3ac43;
+    padding: 10px 20px;
+    border-radius:10px;
+    border-width: 0;
+    box-shadow: 3.1px #00509d;
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.tip button:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.intro-description{
+    font-size: 18px;
+    text-align: left;
+    font-weight: 200;
+    background-color: #F5F0E6;
+    padding: 0 9.5vw;
+    padding-bottom: 7vh;
+    line-height: 150%;
+}
+
+.intro-description b{
+    background-color: #ffd500;
 }
 
 .section1-title{
@@ -211,8 +238,8 @@ nav > ul > li{
     flex-direction: column;
     height: 1.5rem;
     width: auto;
-    color: white;
-    background: #00296b;
+    color: #111111;
+    background: #F5F0E6;
     padding: 0 9.5vw;
     text-align: left;
 }
@@ -235,7 +262,7 @@ nav > ul > li{
     flex-direction: column;
     height: 1.5rem;
     width: auto;
-    color: #000000;
+    color: #111111;
     background: #F5F0E6;
     padding: 0 8vw;
     text-align: left;
@@ -270,16 +297,17 @@ nav > ul > li{
     flex-direction: row;
     align-items: center;
     width: auto;
-    height: 20vw;
+    height: 22vw;
     gap: 6vw;
     background-color: white;
     border-radius: 1vw;
     padding: 0 3vw;
 }
 .section-1 .container img{
-    width: 19vw;
+    width: 18vw;
     aspect-ratio: 1/1;
-    object-fit: contain;
+    object-fit:cover;
+    border-radius: 10px;
 }
 
 .section-1 .text{
@@ -299,7 +327,7 @@ nav > ul > li{
 }
 
 .section-1 .text b{
-    background-color: #ffd500;
+    background-color: #ffe481;
 }
 
 .section-2{
@@ -314,15 +342,9 @@ nav > ul > li{
     padding-right: 9.5vw;
     padding-left: 9.5vw;
     padding-top: 0;
-    padding-bottom:10vh;
+    padding-bottom: 10vh;
     box-sizing: border-box;
     gap: 3vh;
-}
-
-.section-2 .description{
-    font-size: 16px;
-    text-align: left;
-    font-weight: 200;
 }
 
 .section-2 .description{
@@ -347,7 +369,7 @@ nav > ul > li{
     gap: 3vh;
 }
 
-.section-2 .container-section .container{
+.section-2 .container{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -361,11 +383,10 @@ nav > ul > li{
 }
 
 .section-2 .container-section  .container img{
-    width: 19vw;
-    aspect-ratio: 1/1;
+    height: 19vw;
+    /* aspect-ratio: 1/1; */
     object-fit: contain;
 }
-
 
 .section-2 .text{
     flex: 1;
@@ -383,8 +404,35 @@ nav > ul > li{
     background-color: #ffd500;
 }
 
+.section-2 .container-section .container li{
+    list-style:disc;
+}
+
+.section4-title{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    height: 1.5rem;
+    width: auto;
+    color: #111111;
+    background: #F5F0E6;
+    padding: 0 9.5vw;
+    text-align: left;
+}
+.section4-title h2{
+    font-size: 6vh;
+    margin-top: 5vh;
+    margin-bottom: 0;
+}
+.section4-title h3{
+    font-size: 3vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 100;
+}
+
 .section-4{
-    background: #ffffff;
+    background: #F5F0E6;
     display: flex;
     /* justify-content: left;
     align-items: left; */
@@ -405,8 +453,9 @@ nav > ul > li{
     flex-direction: column;
     margin-top: 10vh;
     gap: 3vh;
-    background-color: white;
+    background-color: #F5F0E6;
     padding: 5vh 1vw;
+    padding-top:0;
 
     /* border: solid #000;
     border-width: 3px; */
@@ -445,12 +494,12 @@ nav > ul > li{
 
 .section-4 .balloon .balloon_01 p{
     color:#ffffff;
-    font-size: 3vh;
+    font-size: 18px;
     font-weight: 200;
     text-align: left;
 }
 
-.section-4 .balloon #balloon_02 {
+.section-4 .balloon .balloon_02 {
     position:relative; 
     width: auto;
     height: 8vh;
@@ -458,15 +507,16 @@ nav > ul > li{
 	border-radius: 1em;
     margin-left: auto;
     margin-right: 0.5vw;
-    padding: 1vh 1vw;
+    padding: 2vh 2vw;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     min-width: 0;
 }
 
-.section-4 .balloon #balloon_02:after {
+.section-4 .balloon .balloon_02:after {
     content: '';
 	position: absolute;
 	right: 0;
@@ -481,13 +531,13 @@ nav > ul > li{
 
 }
 
-.section-4 .balloon #balloon_02 p{
+.section-4 .balloon .balloon_02 p{
     color:#00296b;
-    font-size: 2.5vh;
+    font-size: 18px;
     font-weight: 200;
 }
 
-.section-4 .balloon .balloon_03 {
+.section-4 .balloon #balloon_03 {
     position:relative; 
     width: 70vw;
     aspect-ratio: 16/9;
@@ -504,7 +554,7 @@ nav > ul > li{
     min-width: 0;
 }
 
-.section-4 .balloon .balloon_03:after {
+.section-4 .balloon #balloon_03:after {
     content: '';
 	position: absolute;
 	right: 0;
@@ -519,14 +569,14 @@ nav > ul > li{
 
 }
 
-.section-4 .balloon .balloon_03 video{
+.section-4 .balloon #balloon_03 video{
     width: 60vw;
     aspect-ratio: 16/9;
 }
 
-.section-4 .balloon .balloon_03 p{
+.section-4 .balloon #balloon_03 p{
     color:#00296b;
-    font-size: 2.5vh;
+    font-size: 18px;
     font-weight: 200;
 }
 
