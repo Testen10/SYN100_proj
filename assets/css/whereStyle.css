@@ -75,6 +75,11 @@ body {
     padding: 0; /* 네비 아래로 텍스트를 밀기 위해 body 패딩은 제거 */
     font-family: "Geist"; 
     font-weight: 400;
+    min-width: 1024px; /* force desktop layout on mobile */
+}
+
+html {
+    min-width: 1024px;
 }
 
 /*navbar css start*/

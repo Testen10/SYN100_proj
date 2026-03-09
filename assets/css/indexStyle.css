@@ -69,6 +69,11 @@ body {
     padding: 0; /* 네비 아래로 텍스트를 밀기 위해 body 패딩은 제거 */
     font-family: "Geist"; 
     font-weight: 400;
+    min-width: 1024px; /* force desktop layout on mobile */
+}
+
+html {
+    min-width: 1024px;
 }
 
 /*navbar css start*/
@@ -242,7 +247,7 @@ nav > ul > li{
     background: #00296b;
     display: flex;
     flex-direction: row;
-    width: 80vw;
+    width: auto;
     height: 100vh;
     padding: 0 10vw;
     gap: 1vw;
@@ -266,6 +271,8 @@ nav > ul > li{
     flex-direction: column;
     padding: 3vw 2vw;
     width: 40vw;
+    height:auto;
+    min-height: 30vh;
     border-radius: 10px;
     gap: 1vw;
     align-items: center;
@@ -365,10 +372,10 @@ nav > ul > li{
     box-sizing: border-box;
     align-items: start;
     gap: 1vw;
-    width: 39vw;
+    width: auto;
     padding: 1.5vw;
-    min-height: 240px;
-    height: 30vh;
+    /* min-height: 240px; */
+    height: auto;
     border-radius: 5px;
 }
 
@@ -419,7 +426,7 @@ nav > ul > li{
 
 .block-1 .content .icon, .block-2 .content .icon, .block-3 .content .icon, .block-4 .content .icon { 
     width: 8vw;
-    height: 20vh;
+    aspect-ratio: 1/1;
     object-fit: contain;
     align-self: start;
 }
