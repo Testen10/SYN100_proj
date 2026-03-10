@@ -286,6 +286,15 @@ nav > ul > li{
     aspect-ratio: 1/1;
 }
 
+@media (max-width: 500px){
+    #section-1 .option img{
+    object-fit: contain;
+    height: 20vw;
+    max-height: 300px;
+    aspect-ratio: 1/1;
+}
+}
+
 #section-1 .option .option-content{
     flex: 1;
     display: flex;
