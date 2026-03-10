@@ -281,18 +281,9 @@ nav > ul > li{
 
 #section-1 .option img{
     object-fit: contain;
-    height: 20vh;
+    width: 15vw;
     max-height: 500px;
     aspect-ratio: 1/1;
-}
-
-@media (max-width: 300px){
-    #section-1 .option img{
-    object-fit: contain;
-    height: 20vw;
-    max-height: 100px;
-    aspect-ratio: 1/1;
-}
 }
 
 #section-1 .option .option-content{
