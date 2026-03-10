@@ -55,7 +55,7 @@ li {list-style: none; }
 main{
 	background-color: #ffffff;
 	margin: 0 auto; 
-	border-bottom: 1px solid #000000;
+	border-bottom: 1px solid #111111;
 	padding: 20px 0 20px 0; 
 	width: 100%;
 	height: 100%;
@@ -126,7 +126,7 @@ nav > ul > li{
     padding: 6px 4px;
     white-space: nowrap; /* 라벨 줄바꿈 방지 */
     font-size: 16px;
-    color: rgb(0,0,0);
+    color: #111111;
 }
 
 
@@ -226,7 +226,7 @@ nav > ul > li{
 }
 
 #cover .subtitle {
-  font-size: 1.5vw;
+  font-size: 24px;
   font-weight: normal;
   font-style: italic;
   letter-spacing: 4px;
@@ -282,6 +282,7 @@ nav > ul > li{
 #section-1 .option img{
     object-fit: contain;
     height: 20vh;
+    max-height: 500px;
     aspect-ratio: 1/1;
 }
 
@@ -390,14 +391,14 @@ nav > ul > li{
     grid-row: 1; /* 첫 번째 행 */
     grid-column: 2; /* 두 번째 열 */
     background-color: #fdc500;
-    color: #000000;
+    color: #111111;
 }
 
 .block-3 {
     grid-row: 2; /* 두 번째 행 */
     grid-column: 1; /* 첫 번째 열 */
     background-color: #fdc500;
-    color: #000000;
+    color: #111111;
 }
 
 .block-4 {
@@ -464,53 +465,49 @@ nav > ul > li{
 
 .contributers-container{
     margin: 0 auto; /* 중앙 정렬 */
-    display: grid; /* Grid 컨테이너 설정 */
-    grid-template-columns: repeat(4, 1fr); /* 네 개의 균등한 열 */
-    grid-auto-rows: minmax(120px, auto);
+    display: flex;
+    flex-direction: row;
     gap: 1rem; /* 행 간격 2rem, 열 간격 2rem */
-    padding: 0 20px ; 
+    padding: 0 0 ; 
     width: 100%;
     height: auto;
 }
 
 .contributer-1, .contributer-2, .contributer-3, .contributer-4 {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 227px 48px 1fr;         
-    grid-template-areas:
-        "image"
-        "name"
-        "desc";
+    display: flex;
+    flex-direction: column;
     gap: 12px;
     padding: 16px;
-    height: 480px;
+    height: 70vh;
+    max-height: 600px;
+    width: 20vw;
+    min-width: 200px;
     box-sizing: border-box;
     align-items: center;
+    justify-content: center;
     border-radius: 5px;
 
-    border: #000000 1px solid;
+    border: #111111 1px solid;
 }
 
 .contributer-img{
-    grid-area: image;
-    width: auto;
+    width: 15vw;
+    min-width: 150px;
     height: 227px;
     object-fit: cover;
     justify-self: center;
-    align-self: start;
+    align-self: center;
 }
 
 .contributer-1 .name, .contributer-2 .name, .contributer-3 .name, .contributer-4 .name {
-    grid-area: name;
     font-size: 24px;
     height: 2rem;
     justify-self: center;
 }
 
 .contributer-1 .description, .contributer-2 .description, .contributer-3 .description, .contributer-4 .description {
-    grid-area: desc;
     font-size: 16px;
-    height: 4rem;
+    height: 30vh;
     justify-self: center;
     align-self: start;
     text-align: center;

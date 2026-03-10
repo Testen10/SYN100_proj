@@ -61,7 +61,7 @@ li {list-style: none; }
 main{
 	background-color: #ffffff;
 	margin: 0 auto; 
-	border-bottom: 1px solid #000000;
+	border-bottom: 1px solid #111111;
 	padding: 20px 0 20px 0; 
 	width: 100%;
 	height: 100%;
@@ -132,7 +132,7 @@ nav > ul > li{
     padding: 6px 4px;
     white-space: nowrap; /* 라벨 줄바꿈 방지 */
     font-size: 16px;
-    color: rgb(0,0,0);
+    color: #111111;
 }
 
 
@@ -199,13 +199,41 @@ nav > ul > li{
   font-weight: 600;
 }
 
+.button-yellow,
+.button-blue{ 
+    font-size: 16px;
+    text-align: center;
+    padding: 0.5em 10vw;
+    border-radius: 10px;
+    border-width: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button-yellow:hover,
+.button-blue:hover{ 
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(12, 15, 57, 0.2);
+    transition: all 0.3s ease;
+}
+
+.button-blue{ 
+    background-color: #00509d;
+    color: #ffffff;
+}
+
+.button-yellow{
+    background-color: #f3ac43;
+    color: #111111;
+}
+
 .section1-title{
     display: flex;
     flex:1;
     flex-direction: column;
     height: 1.5rem;
     width: auto;
-    color: #000000;
+    color: #111111;
     background: #F5F0E6;
     padding: 0 8vw;
     text-align: left;
@@ -240,13 +268,21 @@ nav > ul > li{
     flex:1;
     flex-direction: row;
     box-sizing: border-box;
-    
     gap: 1vw;
+    padding: 0 1vw;
+    
+}
+
+.ul-disc li{
+    font-weight: 200;
+    list-style:disc;
 }
 
 .block-1{
     display: flex;
-    flex:1;
+    flex: 1;
+    min-width: 0; /* 이게 flexbox에서 공간 넘침 방지의 핵심 */
+    height: auto;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -256,17 +292,11 @@ nav > ul > li{
     background-color: #fff;
     padding: 5vh 3vw;
     border-radius: 10px;
-    height: auto;
-}
-
-.block-1 img{
-    width: 12vw;
-    aspect-ratio: 1/1;
-    object-fit: contain;
 }
 
 .block-1 .text{
     color: #333333;
+    /* flex: 1; */
 }
 
 .block-1 .text h3{ 
@@ -282,23 +312,12 @@ nav > ul > li{
     font-weight: 200;
 }
 
-.block-1 .text a{
-    font-size: 16px;
-    font-style:oblique ;
-    color: #777777;
-    font-weight: 200;
-}
-
-.block-1 .text a:hover{
-    color: #f3ac43;
-    transition-duration: 0.1s;
-}
 
 .block-2{
     display: flex;
-    flex: 0 0 calc(5/12*100%);
+    flex: 1;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     box-sizing: border-box;
     gap: 3vw;
@@ -333,17 +352,6 @@ nav > ul > li{
     font-weight: 200;
 }
 
-.block-2 .text a{
-    font-size: 16px;
-    font-style:oblique ;
-    color: #777777;
-    font-weight: 200;
-}
-
-.block-2 .text a:hover{
-    color: #f3ac43;
-    transition-duration: 0.1s;
-}
 
 .section2-title{
     display: flex;
@@ -473,7 +481,8 @@ nav > ul > li{
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
-    height: 2rem;
+    height: auto;
+    padding: 1rem 0.5rem;
     border: 0px solid #333;
     border-radius: 5px;
     line-height: 24px;
@@ -508,7 +517,8 @@ nav > ul > li{
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
-    height: 2rem;
+    height: auto;
+    padding: 0.5rem 0.25rem;
     border: 0px solid #333;
     border-radius: 5px;
     line-height: 24px;
@@ -535,6 +545,20 @@ nav > ul > li{
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+.section-4 .map .map-overlay{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    display: none;
+    z-index: 10;
 }
 
 footer{

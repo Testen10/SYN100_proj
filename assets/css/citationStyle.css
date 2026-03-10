@@ -78,12 +78,12 @@ body {
 }
 
 html {
-    min-width: 600px;
+    min-width: 1024px;
 }
 
 /*navbar css start*/
 nav{
-    color: #111111;
+    color: rgb(0, 0, 0);
     /* height: 35px; */
     padding: 0 9.5vw;padding: 0 9.5vw;
     width:auto;
@@ -131,7 +131,7 @@ nav > ul > li{
     padding: 6px 4px;
     white-space: nowrap; /* 라벨 줄바꿈 방지 */
     font-size: 16px;
-    color: rgb(0,0,0);
+    color: #111111;
 }
 
 
@@ -174,10 +174,10 @@ nav > ul > li{
 
 #cover {
   position: relative;
-  height: max-content; /* 화면 높이만큼 */
+  height: 20vh; /* 화면 높이만큼 */
   width: 100%;
   overflow: hidden;
-  background-image: url("../img/main_cover_lowBright.jpg");
+  background-image: url("../img/how_img/coverBg.jpg");
 
   display: flex;
   justify-content: center;
@@ -198,14 +198,9 @@ nav > ul > li{
   font-weight: 600;
 }
 
-.section-1{
-    background: #00296b;
-    display: flex;
-    flex-direction: row;
-    /* justify-content: left;
-    align-items: left; */
-    justify-content:flex-start;
-    align-items: center;
+.section{
+    background: #F5F0E6;
+    
     width: 100%;
     height: auto;
     min-height: 80vh;
@@ -216,23 +211,12 @@ nav > ul > li{
     /* padding: 10vh 0; */
 }
 
-.section-1 h3{
+.section h2{
     font-size: 32px;
-    color: #ffffff;
+    color: #111111;
     margin-top:0;
 }
 
-.section-1 .video-block{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: flex-start;
-}
-
-.section-1 .video-block video{
-    width: 40vw;
-    aspect-ratio: 16/9;
-}
 
 footer{
     background-color: #f3ac43;
@@ -241,20 +225,4 @@ footer{
     font-size: 16px;
     padding: 0.5rem 0;
     /* width:100%; */
-}
-
-@media (max-width: 1000px){
-    .section-1{
-        flex-direction: column;
-        justify-content:center;
-    }
-
-    .section-1 .video-block{
-        align-content: center;
-    }
-
-    .section-1 .video-block video{
-        min-width: 360px;
-        align-self: center;
-    }
 }
