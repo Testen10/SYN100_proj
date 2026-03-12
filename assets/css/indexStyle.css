@@ -470,16 +470,15 @@ nav > ul > li{
     gap: 1rem; /* 행 간격 2rem, 열 간격 2rem */
     padding: 0 0 ; 
     width: 100%;
-    height: auto;
+    height:max-content;
 }
 
-.contributer-1, .contributer-2, .contributer-3, .contributer-4 {
+.contributers-container .contributer{
     display: flex;
     flex-direction: column;
     gap: 12px;
     padding: 16px;
-    height: 70vh;
-    max-height: 600px;
+    height: 100%;
     width: 20vw;
     min-width: 200px;
     box-sizing: border-box;
@@ -487,10 +486,13 @@ nav > ul > li{
     justify-content: center;
     border-radius: 5px;
 
-    border: #111111 1px solid;
+    border: #F5F0E6 2px solid;
+    box-shadow: 0 3px 0 #F5F0E6;
+    position: relative;
+    overflow: hidden;
 }
 
-.contributer-img{
+.contributers-container .contributer-img{
     width: 15vw;
     min-width: 150px;
     height: 227px;
@@ -499,22 +501,36 @@ nav > ul > li{
     align-self: center;
 }
 
-.contributer-1 .name, .contributer-2 .name, .contributer-3 .name, .contributer-4 .name {
+.contributers-container .contributer .name{
     font-size: 24px;
     height: 2rem;
     justify-self: center;
 }
 
-.contributer-1 .description, .contributer-2 .description, .contributer-3 .description, .contributer-4 .description {
+.contributers-container .contributer .description{
     font-size: 16px;
-    height: 30vh;
     justify-self: center;
-    align-self: start;
     text-align: center;
     font-style: italic;
-    /* 필요하면 텍스트 정렬/여백 추가 */
-
     font-weight: 100;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 5px;
+}
+
+.contributers-container .contributer:hover .description{
+    opacity: 1;
 }
 
 footer{

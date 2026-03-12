@@ -223,9 +223,8 @@ nav > ul > li{
 .section-1 .task-container .container-2task{
     display:flex;
     flex-direction: row;
-    align-items: center;
     width: auto;
-    height: auto;
+    height: max-content;
     gap: 1vw;
 }
 
@@ -234,8 +233,8 @@ nav > ul > li{
     flex: 1;
     flex-direction: column;
     align-items:flex-start;
-    width: auto;
     height: auto;
+    width: auto;
     /* gap: 6vw; */
     background-color: white;
     border-radius: 1vw;
@@ -256,6 +255,14 @@ nav > ul > li{
     object-fit: contain;
     margin-right: 0.5em;
 }
+
+.task h4{
+    margin-top:0;
+    font-size: 18px;
+    font-weight: 200;
+    font-size: italic;
+}
+
 .task ul{
     display: flex;
     flex-direction: column;
@@ -279,6 +286,20 @@ nav > ul > li{
     box-sizing: border-box;
 }
 
+.task .reply{
+    display: flex;
+    align-items: center;
+    margin-left: 1vw;
+    width: auto;
+    color: #777777;
+}
+
+.task .reply img{
+    width: 1vw;
+    object-fit: contain;
+    margin-right: 0.5em;
+    filter: brightness(80%);
+}
 
 footer{
     background-color: #f3ac43;
