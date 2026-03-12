@@ -110,7 +110,8 @@ nav > ul > li{
     margin-top: 0;
     margin-bottom: 0;
     display: flex;
-    gap:60px;
+    /* gap:60px; */
+    gap: 5vw;
     height: auto;
     /* overflow: hidden; */
 }
@@ -315,6 +316,7 @@ nav > ul > li{
     border-width: 0;
     transition: all 0.3s ease;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 #section-1 .option .option-content .button1:hover,
@@ -378,6 +380,14 @@ nav > ul > li{
     /* min-height: 240px; */
     height: auto;
     border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.block-1:hover,
+.block-2:hover,
+.block-3:hover,
+.block-4:hover{ 
+    transform: scale(1.02);
 }
 
 .block-1 {

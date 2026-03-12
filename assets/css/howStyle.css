@@ -115,7 +115,8 @@ nav > ul > li{
     margin-top: 0;
     margin-bottom: 0;
     display: flex;
-    gap:60px;
+    /* gap:60px; */
+    gap: 5vw;
     height: auto;
     /* overflow: hidden; */
 }
@@ -299,6 +300,7 @@ footer{
 
     .section-2 .video-block video{
         min-width: 360px;
+        width: 30vw;
         align-self: center;
     }
 }

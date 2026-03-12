@@ -178,7 +178,7 @@ nav > ul > li{
   height: 20vh; /* 화면 높이만큼 */
   width: 100%;
   overflow: hidden;
-  background-image: url("../img/how_img/coverBg.jpg");
+  background-image: url("../img/main_cover_lowBright.jpg");
 
   display: flex;
   justify-content: center;
