@@ -83,9 +83,9 @@ html {
 
 /*navbar css start*/
 nav{
-    color: #111111;
+    color: rgb(0, 0, 0);
     /* height: 35px; */
-    padding: 0 9.5vw;padding: 0 9.5vw;
+    padding: 0 9.5vw;
     width:auto;
     display: flex;
     position: fixed; /* 변경: fixed로 고정 */
@@ -132,7 +132,7 @@ nav > ul > li{
     padding: 6px 4px;
     white-space: nowrap; /* 라벨 줄바꿈 방지 */
     font-size: 16px;
-    color: rgb(0,0,0);
+    color: #111111;
 }
 
 

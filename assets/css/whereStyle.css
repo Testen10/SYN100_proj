@@ -86,7 +86,7 @@ html {
 nav{
     color: rgb(0, 0, 0);
     /* height: 35px; */
-    padding: 0 9.5vw;padding: 0 9.5vw;
+    padding: 0 9.5vw;
     width:auto;
     display: flex;
     position: fixed; /* 변경: fixed로 고정 */
@@ -116,7 +116,8 @@ nav > ul > li{
     margin-top: 0;
     margin-bottom: 0;
     display: flex;
-    gap:60px;
+    /* gap:60px; */
+    gap: 5vw;
     height: auto;
     /* overflow: hidden; */
 }
