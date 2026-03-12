@@ -170,7 +170,14 @@ nav > ul > li{
 .dropdown:hover .dropdown{
     display: block;
 }
-
+.message{
+    background-color: white;
+    display: block;
+    left: 5vw;
+    position:fixed;
+    z-index: 900;
+    top: 3em;
+}
 /*navbar css ends*/
 
 #cover {

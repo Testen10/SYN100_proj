@@ -169,9 +169,9 @@ nav > ul > li{
 .message{
     background-color: white;
     display: block;
-    left: 10vh;
+    left: 5vw;
     position:fixed;
-    z-index: 1500;
+    z-index: 900;
     top: 3em;
 }
 
